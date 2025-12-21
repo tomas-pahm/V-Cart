@@ -1,0 +1,47 @@
+    .payment-table th {
+        background: #2E7D32 !important;
+        color: #fff;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    .payment-table tbody tr {
+        transition: 0.2s ease;
+    }
+
+    .payment-table tbody tr:hover {
+        background: #f1f8e9;
+    }
+
+    .badge {
+        padding: 6px 10px;
+        font-size: 13px;
+        border-radius: 6px;
+    }
+
+    .badge-success {
+        background: #43a047 !important;
+    }
+
+    .badge-warning {
+        background: #fdd835 !important;
+        color: #000 !important;
+    }
+
+    .badge-danger {
+        background: #e53935 !important;
+    }
+
+    .btn-detail {
+        border-radius: 8px;
+        padding: 6px 14px;
+        border: 1px solid #2E7D32;
+        color: #2E7D32;
+        font-weight: 500;
+        transition: all 0.2s ease;
+    }
+
+    .btn-detail:hover {
+        background: #2E7D32;
+        color: #fff;
+    }

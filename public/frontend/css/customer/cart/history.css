@@ -1,0 +1,64 @@
+.features_items {
+    padding: 30px;
+}
+
+.features_items h2.title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.table-condensed {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.table-condensed th, .table-condensed td {
+    padding: 12px 15px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.table-condensed th {
+    background-color: #2E7D32;
+    color: white;
+    font-weight: 600;
+}
+
+.table-condensed tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table-condensed tr:hover {
+    background-color: #e0f2f1;
+}
+
+.table-condensed img {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.text-success {
+    color: #2E7D32 !important;
+}
+
+.cart_info {
+    margin-top: 20px;
+}
+
+.text-center img {
+    margin-bottom: 15px;
+}
+
+.text-center p {
+    font-weight: 500;
+}
+
+.text-center a.btn-success {
+    background-color: #2E7D32;
+    border: none;
+}
+
+.text-center a.btn-success:hover {
+    background-color: #1B5E20;
+}
