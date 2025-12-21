@@ -103,10 +103,7 @@ class UserController extends Controller
 {
    
 
-    // 1. Cấm Admin chỉnh Super Admin
-    if (auth()->user()->role_id != 3 && $user->role_id == 3) {
-        abort(403, 'Bạn không có quyền chỉnh Super Admin');
-    }
+
 
     // 2. Validate chung
     $request->validate([
@@ -123,7 +120,11 @@ class UserController extends Controller
     ]);
 
     // Cấm bất kỳ ai tự đổi role của chính mình
-if ($user->user_id == auth()->id() && $request->role_id != $user->role_id) {
+if (
+    auth()->user()->role_id == 3 &&   // CHỈ SUPER ADMIN
+    $user->user_id == auth()->id() &&
+    $request->role_id != $user->role_id
+) {
     return back()->with('error', 'Bạn không thể thay đổi vai trò của chính mình!');
 }
 
