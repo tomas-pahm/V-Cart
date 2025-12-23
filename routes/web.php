@@ -7,11 +7,14 @@ use App\Http\Controllers\Customer\CartController;
 use App\Http\Controllers\Customer\CheckoutController;
 use App\Http\Controllers\Customer\WishlistController;
 use App\Http\Controllers\Customer\PaymentController;
+
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\UserController;
+
+use App\Http\Controllers\Auth\GoogleController;
 
 
 /*
@@ -127,12 +130,17 @@ Route::get('/test-cart', function () {
 Route::post('/checkout', [CheckoutController::class, 'process'])
     ->name('checkout.process');
 
+    Route::post('/payments/{payment}/cancel', [PaymentController::class, 'cancel'])
+    ->name('payments.cancel');
+
     //Lịch sử mua hàng
     Route::get('/cart/history', [CartController::class, 'history'])->name('cart.history');
 
 
 Route::get('/tim-kiem', [VegetasController::class, 'search'])->name('products.search');
 
+Route::get('auth/google', [GoogleController::class, 'redirectToGoogle'])->name('auth.google');
+Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);
 
 // Auth routes (login, register, forgot password...)
 require __DIR__.'/auth.php';

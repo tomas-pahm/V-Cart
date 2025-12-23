@@ -1,0 +1,170 @@
+/* Biến màu sắc toàn cục */
+:root {
+    --default-color: #0a0f14;
+    --heading-color: #0f2943;
+    --accent-color: #2E7D32;
+    --bg-container: rgba(214, 212, 212, 0.858);
+}
+
+/* Cấu trúc nền và căn giữa */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(160deg, var(--heading-color), var(--accent-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Header & Logo */
+.header {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.logo:hover {
+    text-shadow: 0 0 10px var(--accent-color), 0 0 20px var(--accent-color);
+}
+
+.sitename {
+    font-family: 'Dancing Script', cursive;
+}
+
+.sitetagline {
+    font-size: 16px;
+    font-weight: normal;
+    color: #cde6ff;
+}
+
+/* Container dùng chung cho cả Login và Signup */
+.auth-container {
+    background: var(--bg-container);
+    padding: 2rem 3rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.76);
+    text-align: center;
+    width: 320px;
+}
+
+.auth-container h2 {
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    font-size: 24px;
+    background: linear-gradient(160deg, var(--heading-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+/* Input styles */
+.auth-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+.auth-container input:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 10px #2E7D32;
+    outline: none;
+}
+
+/* Button styles */
+.auth-container button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px 0;
+    border-radius: 55px;
+    background: transparent;
+    border: 2px solid var(--accent-color);
+    color: black;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.auth-container button:hover {
+    background: linear-gradient(160deg, var(--heading-color), var(--accent-color));
+    color: white;
+    border-color: white;
+}
+
+/* Thông báo lỗi & thành công */
+.error { background: #ffebee; color: #d32f2f; padding: 10px; border-radius: 5px; margin: 10px 0; font-size: 0.9rem; }
+.success { background: #e8f5e9; color: #2e7d32; padding: 10px; border-radius: 5px; margin: 10px 0; font-size: 0.9rem; }
+
+/* Link điều hướng dưới form */
+.switch-auth {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.switch-auth a {
+    color: #5c6bc0;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Đường kẻ ngang tinh tế hơn */
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    color: #666;
+    font-size: 0.8rem;
+}
+
+.divider::before, .divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #bbb;
+}
+
+.divider span {
+    padding: 0 10px;
+}
+
+/* Nút Google theo style Vegetas Cart */
+.google-auth-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 55px; /* Bo tròn giống nút Đăng Nhập */
+    background: white;
+    border: 2px solid var(--accent-color); /* Viền xanh lá */
+    color: #333;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+    box-sizing: border-box;
+}
+
+.google-auth-btn:hover {
+    background: #f1f8e9; /* Màu xanh lá cực nhạt khi hover */
+    box-shadow: 0 2px 8px rgba(46, 125, 50, 0.3);
+    transform: translateY(-1px);
+}
